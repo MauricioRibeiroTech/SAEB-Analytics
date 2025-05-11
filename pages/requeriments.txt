@@ -1,0 +1,8 @@
+PIL
+os
+pandas
+plotly.express
+plotly.graph_objects
+plotly.subplots
+numpy
+plotly.express
