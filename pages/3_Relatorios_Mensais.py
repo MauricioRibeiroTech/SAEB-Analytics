@@ -53,9 +53,9 @@ with st.sidebar:
     """, unsafe_allow_html=True)
 
     st.page_link("main.py", label="🏠 Página Inicial")
-    st.page_link("pages/3-Relatorios Mensais.py", label="📅 Relatório Mensal")
-    st.page_link("pages/2-SAEB Descritores.py", label="📊 Relatório SAEB Descritores")
-    st.page_link("pages/1-SAEB Metodologia.py", label="📈 Desempenho percentual")
+    st.page_link("pages/3_Relatorios_Mensais.py", label="📅 Relatório Mensal")
+    st.page_link("pages/2_SAEB_Descritores.py", label="📊 Relatório SAEB Descritores")
+    st.page_link("pages/1_SAEB_Metodologia.py", label="📈 Desempenho percentual")
 
 
     # Carregar dados
