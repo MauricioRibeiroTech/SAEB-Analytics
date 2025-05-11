@@ -7,3 +7,4 @@ plotly.subplots
 numpy
 plotly>=5.0.0
 streamlit>=1.0.0
+pip install plotly --upgrade
