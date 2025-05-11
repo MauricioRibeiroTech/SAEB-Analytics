@@ -1,0 +1,244 @@
+Aluno,Turma,Componente,Sim1,Sim2,Sim3
+ABDIEL JOSUE,6A,Matemática,3,6,0
+ANALU ALVES,6A,Matemática,4,6,0
+ANDERSON,6A,Matemática,0,3,0
+ANNE CAROLINE,6A,Matemática,3,4,0
+APOLO,6A,Matemática,4,6,0
+ARTHUR,6A,Matemática,0,8,0
+BARBARA,6A,Matemática,6,6,0
+BENJAMIM,6A,Matemática,7,7,0
+BENTO,6A,Matemática,10,10,0
+DAVID,6A,Matemática,2,0,0
+DAVI,6A,Matemática,6,3,0
+DOMINIC,6A,Matemática,7,9,0
+EMANUELLY,6A,Matemática,5,7,0
+FERNANDHA,6A,Matemática,8,9,0
+GABRIEL KALEU,6A,Matemática,6,4,0
+HELOISA,6A,Matemática,9,10,0
+JULIA MOLETTA,6A,Matemática,8,5,0
+LARA BEATRIZ,6A,Matemática,0,6,0
+LAURA KIESKI,6A,Matemática,8,8,0
+LEONARDO BARBIK,6A,Matemática,6,5,0
+MARIA CECILIA,6A,Matemática,3,4,0
+MARIA CLARA,6A,Matemática,0,5,0
+MARIA ISABELLY,6A,Matemática,9,10,0
+MIGUEL,6A,Matemática,6,8,0
+MIKAELA,6A,Matemática,0,8,0
+PEDRO HENRIQUE,6A,Matemática,9,8,0
+RAFAELA,6A,Matemática,0,7,0
+RAFAELA FARIAS,6A,Matemática,9,9,0
+REBECCA,6A,Matemática,0,2,0
+SERENA,6A,Matemática,8,7,0
+VINICIUS,6A,Matemática,6,0,0
+YURI,6A,Matemática,10,9,0
+PIETRA VALENTINA,6A,Matemática,7,6,0
+LEONARDO,6A,Matemática,8,0,0
+THALISSA,6A,Matemática,7,5,0
+BEATRIZ VAZ,6A,Matemática,9,0,0
+MARCO ANTONIO,6A,Matemática,0,6,0
+LEONARDO V N SALES,6A,Matemática,8,10,0
+ABDIEL JOSUE,6A,Português,0,7,0
+ANALU ALVES,6A,Português,9,2,0
+ANDERSON,6A,Português,0,5,0
+ANNE CAROLINE,6A,Português,6,3,0
+APOLO,6A,Português,8,6,0
+ARTHUR,6A,Português,6,3,0
+BARBARA,6A,Português,8,4,0
+BENJAMIM,6A,Português,9,7,0
+BENTO,6A,Português,7,5,0
+DAVID,6A,Português,7,2,0
+DAVI,6A,Português,5,4,0
+DOMINIC,6A,Português,4,6,0
+EMANUELLY,6A,Português,7,3,0
+FERNANDHA,6A,Português,8,4,0
+GABRIEL KALEU,6A,Português,2,3,0
+HELOISA,6A,Português,10,10,0
+JULIA MOLETTA,6A,Português,4,4,0
+LARA BEATRIZ,6A,Português,8,8,0
+LAURA KIESKI,6A,Português,6,7,0
+LEONARDO BARBIK,6A,Português,6,4,0
+MARIA CECILIA,6A,Português,5,6,0
+MARIA CLARA,6A,Português,10,1,0
+MARIA ISABELLY,6A,Português,9,6,0
+MIGUEL,6A,Português,9,5,0
+MIKAELA,6A,Português,0,4,0
+PEDRO HENRIQUE,6A,Português,8,6,0
+RAFAELA,6A,Português,0,5,0
+RAFAELA FARIAS,6A,Português,9,7,0
+REBECCA,6A,Português,0,7,0
+SERENA,6A,Português,6,3,0
+VINICIUS,6A,Português,8,8,0
+YURI,6A,Português,8,9,0
+PIETRA VALENTINA,6A,Português,7,5,0
+LEONARDO,6A,Português,8,3,0
+THALISSA,6A,Português,10,3,0
+BEATRIZ VAZ,6A,Português,9,9,0
+MARCO ANTONIO,6A,Português,8,5,0
+LEONARDO V N SALES,6A,Português,8,10,0
+ALYSSA,7A,Matemática,4,0,0
+ANTONIA,7A,Matemática,5,0,0
+CAMILY,7A,Matemática,5,0,0
+DAVI ARTHUR,7A,Matemática,9,0,0
+DAVI COSTA,7A,Matemática,6,0,0
+DEBORA,7A,Matemática,2,0,0
+EDUARDO,7A,Matemática,2,0,0
+ENZO,7A,Matemática,3,0,0
+ERICA,7A,Matemática,9,0,0
+GABRIELLE,7A,Matemática,1,0,0
+GABRIELLY,7A,Matemática,2,0,0
+HELOIZE,7A,Matemática,6,0,0
+ISADORA,7A,Matemática,10,0,0
+KAUÃ,7A,Matemática,7,0,0
+LARA,7A,Matemática,7,0,0
+LETÍCIA,7A,Matemática,6,0,0
+LUCIANO,7A,Matemática,4,0,0
+MARIA,7A,Matemática,7,0,0
+MATHEUS,7A,Matemática,6,0,0
+RAÍ,7A,Matemática,1,0,0
+RAPHAEL,7A,Matemática,10,0,0
+RAYANE,7A,Matemática,1,0,0
+REBECA,7A,Matemática,2,0,0
+ROGER,7A,Matemática,9,0,0
+SOFHIA,7A,Matemática,2,0,0
+STEPHANE,7A,Matemática,4,0,0
+VICTORIA,7A,Matemática,5,0,0
+YOHAN,7A,Matemática,4,0,0
+SOPHIA,7A,Matemática,1,0,0
+ALYSSA,7A,Português,4,2,3
+ANTONIA,7A,Português,5,6,2
+CAMILY,7A,Português,5,5,4
+DAVI ARTHUR,7A,Português,9,6,6
+DAVI COSTA,7A,Português,6,6,7
+DEBORA,7A,Português,2,4,2
+EDUARDO,7A,Português,2,2,4
+ENZO,7A,Português,3,4,3
+ERICA,7A,Português,9,7,7
+GABRIELLE,7A,Português,1,5,4
+GABRIELLY,7A,Português,2,4,5
+HELOIZE,7A,Português,6,5,6
+ISADORA,7A,Português,10,6,7
+KAUÃ,7A,Português,7,3,4
+LARA,7A,Português,7,3,4
+LETÍCIA,7A,Português,6,8,9
+LUCIANO,7A,Português,4,2,5
+MARIA,7A,Português,7,7,7
+MATHEUS,7A,Português,6,2,2
+RAÍ,7A,Português,1,5,6
+RAPHAEL,7A,Português,10,7,8
+RAYANE,7A,Português,1,2,2
+REBECA,7A,Português,2,3,3
+ROGER,7A,Português,9,5,4
+SOFHIA,7A,Português,2,3,4
+STEPHANE,7A,Português,4,4,5
+VICTORIA,7A,Português,5,7,8
+YOHAN,7A,Português,4,6,6
+ELOAH,7A,Português,8,8,8
+SOPHIA,7A,Português,1,3,4
+BERNARDO,7B,Matemática,5,8,0
+GABRIELA,7B,Matemática,9,6,0
+HENZO,7B,Matemática,2,3,0
+HEVERTON,7B,Matemática,2,3,0
+ISADORA,7B,Matemática,3,5,0
+LIA,7B,Matemática,7,8,0
+LORENZO,7B,Matemática,7,9,0
+LUCAS,7B,Matemática,2,6,0
+LUCAS DANIEL,7B,Matemática,2,3,0
+MAIK,7B,Matemática,6,5,0
+MATHEUS,7B,Matemática,4,3,0
+MONIQUE,7B,Matemática,9,6,0
+REIKA,7B,Matemática,5,5,0
+RUAN,7B,Matemática,10,9,0
+VALENTINA,7B,Matemática,3,9,0
+YAN,7B,Matemática,2,6,0
+YASMIN,7B,Matemática,6,9,0
+SOPHIA,7B,Matemática,4,4,0
+JULIA,7B,Matemática,8,8,0
+BERNARDO,7B,Português,8,0,0
+GABRIELA,7B,Português,6,0,0
+HENZO,7B,Português,3,0,0
+HEVERTON,7B,Português,3,0,0
+ISADORA,7B,Português,5,0,0
+LIA,7B,Português,8,0,0
+LORENZO,7B,Português,9,0,0
+LUCAS,7B,Português,6,0,0
+LUCAS DANIEL,7B,Português,3,0,0
+MAIK,7B,Português,5,0,0
+MATHEUS,7B,Português,3,0,0
+MONIQUE,7B,Português,6,0,0
+REIKA,7B,Português,5,0,0
+RUAN,7B,Português,9,0,0
+VALENTINA,7B,Português,9,0,0
+YAN,7B,Português,6,0,0
+YASMIN,7B,Português,9,0,0
+SOPHIA,7B,Português,7,4,0
+JULIA,7B,Português,0,4,0
+ALÍCIA BRITO,8A,Matemática,8,0,0
+ANIBAL,8A,Matemática,6,3,0
+DANIEL MARQUES,8A,Matemática,5,3,0
+DAVI,8A,Matemática,6,7,0
+EMANUELA,8A,Matemática,4,6,0
+GUSTAVO,8A,Matemática,5,7,0
+HELENA,8A,Matemática,8,7,0
+HELOISA,8A,Matemática,2,3,0
+HOSANA,8A,Matemática,2,2,0
+ISABELLY,8A,Matemática,3,4,0
+KAIO,8A,Matemática,3,1,0
+KAIQUE,8A,Matemática,2,3,0
+KELLY,8A,Matemática,5,5,0
+LAURA,8A,Matemática,8,7,0
+LEONARDO,8A,Matemática,4,5,0
+LETICIA DE OLIVEIRA,8A,Matemática,5,2,0
+LETÍCIA PETRACCA,8A,Matemática,6,5,0
+LUCAS,8A,Matemática,4,2,0
+MARIA CLARA,8A,Matemática,5,4,0
+MARIANA,8A,Matemática,0,4,0
+MARIA VITORIA,8A,Matemática,4,5,0
+MIRIAN,8A,Matemática,4,3,0
+MORGANA,8A,Matemática,5,3,0
+NICOLLE,8A,Matemática,7,7,0
+PIETRO,8A,Matemática,7,6,0
+RAFAELA,8A,Matemática,6,8,0
+REBECA,8A,Matemática,6,7,0
+SOFIA,8A,Matemática,3,6,0
+VALENTINA,8A,Matemática,7,6,0
+VICTOR GUSTAVVO,8A,Matemática,5,5,0
+VICTOR MANUEL,8A,Matemática,3,4,0
+VINICIUS EDUARDO,8A,Matemática,4,0,0
+YASMIM,8A,Matemática,5,3,0
+MARIA EDUARDA,8A,Matemática,5,5,0
+BRYAN,8A,Matemática,5,6,0
+ALÍCIA BRITO,8A,Português,8,0,0
+ANIBAL,8A,Português,5,4,0
+DANIEL MARQUES,8A,Português,4,4,0
+DAVI,8A,Português,6,8,0
+EMANUELA,8A,Português,2,8,0
+GUSTAVO,8A,Português,7,9,0
+HELENA,8A,Português,4,5,0
+HELOISA,8A,Português,3,6,0
+HOSANA,8A,Português,0,7,0
+ISABELLY,8A,Português,7,6,0
+KAIO,8A,Português,6,2,0
+KAIQUE,8A,Português,9,6,0
+KELLY,8A,Português,4,4,0
+LAURA,8A,Português,2,5,0
+LEONARDO,8A,Português,2,4,0
+LETICIA DE OLIVEIRA,8A,Português,3,4,0
+LETÍCIA PETRACCA,8A,Português,6,9,0
+LUCAS,8A,Português,2,2,0
+MARIA CLARA,8A,Português,7,6,0
+MARIANA,8A,Português,2,4,0
+MARIA VITORIA,8A,Português,6,8,0
+MIRIAN,8A,Português,0,6,0
+MORGANA,8A,Português,3,5,0
+NICOLLE,8A,Português,7,7,0
+PIETRO,8A,Português,6,5,0
+RAFAELA,8A,Português,4,6,0
+REBECA,8A,Português,8,5,0
+SOFIA,8A,Português,5,6,0
+VALENTINA,8A,Português,5,6,0
+VICTOR GUSTAVVO,8A,Português,5,4,0
+VICTOR MANUEL,8A,Português,5,6,0
+VINICIUS EDUARDO,8A,Português,3,0,0
+YASMIM,8A,Português,6,3,0
+MARIA EDUARDA,8A,Português,2,4,0
+BRYAN,8A,Português,7,4,0
