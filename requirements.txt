@@ -1,4 +1,3 @@
-os
 plotly
 plotly.express
 pandas
