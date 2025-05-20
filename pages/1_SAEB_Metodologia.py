@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-from plotly.subplots import make_subplots
+import re
 
 # Configurações da página com estilo moderno
 st.set_page_config(
@@ -52,15 +52,32 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-# Função para calcular porcentagens
+# Função para calcular porcentagens - agora genérica
 def calcular_porcentagens(df, disciplina):
-    if disciplina == "Matemática":
-        divisores = {1: 10, 2: 10, 3: 12, 4: 15, 5: 18, 6: 18, 7: 20, 8: 16, 9: 26}
-    else:  # Português
-        divisores = {1: 10, 2: 10, 3: 10, 4: 15, 5: 18, 6: 18, 7: 14, 8: 16, 9: 26}
+    # Dicionário de divisores por disciplina
+    DIVISORES = {
+        "Matemática": {
+            'Sim1': 10, 'Sim2': 10, 'Sim3': 12,
+            'Sim4': 15, 'Sim5': 18, 'Sim6': 18,
+            'Sim7': 20, 'Sim8': 16, 'Sim9': 26,
+            'Sim10':16
+        },
+        "Português": {
+            'Sim1': 10, 'Sim2': 10, 'Sim3': 10,
+            'Sim4': 15, 'Sim5': 18, 'Sim6': 18,
+            'Sim7': 14, 'Sim8': 16, 'Sim9': 26,
+            'Sim10':16
+        }
+    }
 
-    for i in range(1, 10):
-        df[f'Porcentagem Simulado {i}'] = (df[f'Sim{i}'] / divisores[i]) * 100
+    # Encontra automaticamente todas as colunas de simulado
+    colunas_sim = [col for col in df.columns if re.match(r'Sim\d+', col)]
+
+    # Calcula as porcentagens apenas para as colunas existentes com divisores definidos
+    for col in colunas_sim:
+        if col in DIVISORES[disciplina]:
+            df[f'Porcentagem {col}'] = (df[col] / DIVISORES[disciplina][col]) * 100
+
     return df
 
 
@@ -77,7 +94,6 @@ with st.sidebar:
     st.page_link("pages/3_Relatorios_Mensais.py", label="📅 Relatório Mensal")
     st.page_link("pages/2_SAEB_Descritores.py", label="📊 Relatório SAEB Descritores")
     st.page_link("pages/1_SAEB_Metodologia.py", label="📈 Desempenho percentual")
-
 
     # Carregar dados
     df = pd.read_csv("pages/Dados_simples_simulados.csv", sep=",")
@@ -104,7 +120,7 @@ with st.sidebar:
 
 # Processamento dos dados
 df = calcular_porcentagens(df, componente_selecionada)
-simulados = [f'Porcentagem Simulado {i}' for i in range(1, 10)]
+simulados = [col for col in df.columns if col.startswith('Porcentagem Sim')]
 
 # Layout principal com cabeçalho destacado
 st.markdown(f"""
@@ -120,8 +136,8 @@ st.markdown("### 📊 Visão Geral do Desempenho")
 # Criar métricas em colunas
 col1, col2, col3 = st.columns(3)
 media_geral = df[simulados].mean().mean().round(2)
-melhor_simulado = df[simulados].mean().idxmax().replace('Porcentagem Simulado ', 'Simulado ')
-pior_simulado = df[simulados].mean().idxmin().replace('Porcentagem Simulado ', 'Simulado ')
+melhor_simulado = df[simulados].mean().idxmax().replace('Porcentagem ', '')
+pior_simulado = df[simulados].mean().idxmin().replace('Porcentagem ', '')
 
 with col1:
     st.metric(
@@ -150,7 +166,7 @@ st.markdown("### 📈 Evolução do Desempenho Médio")
 # Preparar dados para o gráfico
 medias_simulados = df[simulados].mean().reset_index()
 medias_simulados.columns = ['Simulado', 'Porcentagem']
-medias_simulados['Simulado'] = medias_simulados['Simulado'].str.replace('Porcentagem Simulado ', '')
+medias_simulados['Simulado'] = medias_simulados['Simulado'].str.replace('Porcentagem ', '')
 
 # Criar figura com Plotly
 fig1 = go.Figure()
@@ -166,7 +182,7 @@ fig1.add_trace(go.Scatter(
     text=medias_simulados['Porcentagem'].round(1),
     textposition="top center",
     texttemplate='%{text}%',
-    hovertemplate='Simulado %{x}<br>Média: %{y:.1f}%'
+    hovertemplate='%{x}<br>Média: %{y:.1f}%'
 ))
 
 # Adicionar área sombreada
@@ -209,7 +225,7 @@ df_melted = df.melt(id_vars=['Aluno'],
                     var_name='Simulado',
                     value_name='Porcentagem')
 
-df_melted['Simulado'] = df_melted['Simulado'].str.replace('Porcentagem Simulado ', '')
+df_melted['Simulado'] = df_melted['Simulado'].str.replace('Porcentagem ', '')
 
 fig2 = px.density_heatmap(
     df_melted,
@@ -224,7 +240,7 @@ fig2 = px.density_heatmap(
 
 # Adicionar anotações para valores
 fig2.update_traces(
-    hovertemplate="<b>%{y}</b><br>Simulado %{x}<br>%{z:.1f}%<extra></extra>",
+    hovertemplate="<b>%{y}</b><br>%{x}<br>%{z:.1f}%<extra></extra>",
     showscale=True
 )
 
@@ -277,22 +293,21 @@ st.plotly_chart(fig3, use_container_width=True)
 st.markdown("### ✅ Alunos com Desempenho Acima de 60%")
 
 # Criar abas para cada simulado
-tabs = st.tabs([f"Simulado {i}" for i in range(1, 10)])
+tabs = st.tabs([sim.replace('Porcentagem ', '') for sim in simulados])
 
-for i, tab in enumerate(tabs, start=1):
+for sim, tab in zip(simulados, tabs):
     with tab:
         col_sim, col_graph = st.columns([1, 2])
 
         # Filtro para alunos acima de 60%
-        sim_col = f'Porcentagem Simulado {i}'
-        df_filtrado = df[df[sim_col] >= 60].sort_values(sim_col, ascending=False)
+        df_filtrado = df[df[sim] >= 60].sort_values(sim, ascending=False)
 
         # Tabela estilizada
         with col_sim:
             st.dataframe(
-                df_filtrado[['Aluno', sim_col]].style
-                .background_gradient(cmap='Blues', subset=[sim_col])
-                .format({sim_col: "{:.1f}%"}),
+                df_filtrado[['Aluno', sim]].style
+                .background_gradient(cmap='Blues', subset=[sim])
+                .format({sim: "{:.1f}%"}),
                 height=400,
                 use_container_width=True
             )
@@ -303,12 +318,12 @@ for i, tab in enumerate(tabs, start=1):
                 fig = px.bar(
                     df_filtrado,
                     y='Aluno',
-                    x=sim_col,
+                    x=sim,
                     orientation='h',
-                    title=f'Desempenho no Simulado {i}',
-                    color=sim_col,
+                    title=f'Desempenho no {sim.replace("Porcentagem ", "")}',
+                    color=sim,
                     color_continuous_scale='Blues',
-                    labels={sim_col: 'Porcentagem de Acertos (%)'},
+                    labels={sim: 'Porcentagem de Acertos (%)'},
                     height=400
                 )
 
@@ -327,7 +342,7 @@ for i, tab in enumerate(tabs, start=1):
 
                 st.plotly_chart(fig, use_container_width=True)
             else:
-                st.warning(f"Nenhum aluno atingiu 60% no Simulado {i}", icon="⚠️")
+                st.warning(f"Nenhum aluno atingiu 60% no {sim.replace('Porcentagem ', '')}", icon="⚠️")
 
 ## Seção 6: Comparação entre Componentes (se disponível)
 if 'Componente' in df.columns and len(df['Componente'].unique()) > 1:
@@ -350,3 +365,4 @@ if 'Componente' in df.columns and len(df['Componente'].unique()) > 1:
     )
 
     st.plotly_chart(fig_comp, use_container_width=True)
+
