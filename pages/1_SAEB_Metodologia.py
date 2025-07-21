@@ -135,7 +135,7 @@ st.markdown("### 📊 Visão Geral do Desempenho")
 
 # Criar métricas em colunas
 col1, col2, col3 = st.columns(3)
-media_geral = df[simulados].mean().mean().round(2)
+media_geral = df[simulados].mean().mean().round()
 melhor_simulado = df[simulados].mean().idxmax().replace('Porcentagem ', '')
 pior_simulado = df[simulados].mean().idxmin().replace('Porcentagem ', '')
 
