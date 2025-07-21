@@ -60,13 +60,13 @@ def calcular_porcentagens(df, disciplina):
             'Sim1': 10, 'Sim2': 10, 'Sim3': 12,
             'Sim4': 15, 'Sim5': 18, 'Sim6': 18,
             'Sim7': 20, 'Sim8': 16, 'Sim9': 26,
-            'Sim10':16, 'Sim11':16
+            'Sim10':16, 'Sim11':18
         },
         "Português": {
             'Sim1': 10, 'Sim2': 10, 'Sim3': 10,
             'Sim4': 15, 'Sim5': 18, 'Sim6': 18,
             'Sim7': 14, 'Sim8': 16, 'Sim9': 26,
-            'Sim10':16, 'Sim11':16
+            'Sim10':16, 'Sim11':18
         }
     }
 
