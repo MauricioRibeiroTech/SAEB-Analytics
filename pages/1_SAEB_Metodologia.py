@@ -60,13 +60,15 @@ def calcular_porcentagens(df, disciplina):
             'Sim1': 10, 'Sim2': 10, 'Sim3': 12,
             'Sim4': 15, 'Sim5': 18, 'Sim6': 18,
             'Sim7': 20, 'Sim8': 16, 'Sim9': 26,
-            'Sim10':16, 'Sim11':18
+            'Sim10': 16, 'Sim11': 18, 'Sim12': 16,
+            'Sim13': 16
         },
         "Português": {
             'Sim1': 10, 'Sim2': 10, 'Sim3': 10,
             'Sim4': 15, 'Sim5': 18, 'Sim6': 18,
             'Sim7': 14, 'Sim8': 16, 'Sim9': 26,
-            'Sim10':16, 'Sim11':18
+            'Sim10': 16, 'Sim11': 18, 'Sim12': 16,
+            'Sim13': 16
         }
     }
 
@@ -97,6 +99,12 @@ with st.sidebar:
 
     # Carregar dados
     df = pd.read_csv("pages/Dados_simples_simulados.csv", sep=",")
+
+    # Corrigir nome da coluna Componente
+    df['Componente'] = df['Componente'].replace({
+        'Matematica': 'Matemática',
+        'Portugues': 'Português'
+    })
 
     # Seleção de componente
     componente_selecionada = st.selectbox("Componente Curricular", ["Matemática", "Português"])
@@ -135,14 +143,23 @@ st.markdown("### 📊 Visão Geral do Desempenho")
 
 # Criar métricas em colunas
 col1, col2, col3 = st.columns(3)
-media_geral = df[simulados].mean()
-melhor_simulado = df[simulados].mean().idxmax().replace('Porcentagem ', '')
-pior_simulado = df[simulados].mean().idxmin().replace('Porcentagem ', '')
+
+# Calcular médias, tratando possíveis valores NaN
+medias = df[simulados].mean()
+media_geral = medias.mean().round(1)
+
+# Encontrar melhor e pior simulado
+if not medias.empty:
+    melhor_simulado = medias.idxmax().replace('Porcentagem ', '') if not medias.isna().all() else "N/A"
+    pior_simulado = medias.idxmin().replace('Porcentagem ', '') if not medias.isna().all() else "N/A"
+else:
+    melhor_simulado = "N/A"
+    pior_simulado = "N/A"
 
 with col1:
     st.metric(
         "Média Geral",
-        f"{media_geral}%",
+        f"{media_geral}%" if not pd.isna(media_geral) else "N/A",
         help="Média de todos os simulados"
     )
 
@@ -365,4 +382,3 @@ if 'Componente' in df.columns and len(df['Componente'].unique()) > 1:
     )
 
     st.plotly_chart(fig_comp, use_container_width=True)
-

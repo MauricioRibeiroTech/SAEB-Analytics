@@ -59,7 +59,7 @@ with st.sidebar:
 
     with st.container():
         st.markdown("### Configurações do Relatório")
-        df = pd.read_csv("pages/descritores.csv", sep=",")
+        df = pd.read_csv("pages/descritores2.csv", sep=",")
         salas_distintas = df["Simulados"].unique().tolist()
         salas_selecionadas = st.selectbox("Selecione o Simulado", salas_distintas)
         componente_selecionada = st.radio("Componente Curricular", ["Matematica", "Portugues"])
