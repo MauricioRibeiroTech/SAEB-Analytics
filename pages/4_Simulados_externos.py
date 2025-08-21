@@ -104,8 +104,8 @@ with st.sidebar:
 # Layout principal com cabeçalho destacado
 st.markdown(f"""
 <div style="background-color: #3498db; padding: 20px; border-radius: 10px; margin-bottom: 30px;">
-    <h1 style="text-align: center; margin: 0;">Relatório</h1>
-    <h2 style="text-align: center; margin: 0;">Análise de Desempenho nos Simulados Externos</h2>
+    <h1 style="text-align: center; margin: 0;">Relatório de desempenho</h1>
+    <h2 style="text-align: center; margin: 0;">Simulados Externos</h2>
 </div>
 """, unsafe_allow_html=True)
 
