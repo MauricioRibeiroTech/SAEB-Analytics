@@ -135,7 +135,7 @@ with st.sidebar:
 st.markdown(f"""
 <div class="header">
     <h1 style="text-align: center; margin: 0;">Análise de Desempenho - {disciplina_selecionada}</h1>
-    <h2 style="text-align: center; margin: 0;">7º B Ano - PPR 2025</h2>
+    <h2 style="text-align: center; margin: 0;">7º A Ano - PPR 2025</h2>
 </div>
 """, unsafe_allow_html=True)
 
