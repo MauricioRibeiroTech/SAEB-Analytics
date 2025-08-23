@@ -58,7 +58,7 @@ with st.sidebar:
 
     # Carregar dados
     try:
-        df = pd.read_csv("pages/todos.csv", sep=';')
+        df = pd.read_csv("pages/todos.csv", sep=',')
 
         # Converter colunas de notas para numérico (tratando possíveis erros)
         for col in df.columns:
