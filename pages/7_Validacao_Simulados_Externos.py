@@ -55,13 +55,25 @@ st.markdown("""
         color: white;
     }
     .metric-card {
-        background: #000000;
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
         padding: 1.2rem;
         border-radius: 12px;
         border-left: 5px solid #3498db;
         margin: 0.5rem;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         text-align: center;
+        color: #2c3e50 !important;
+    }
+    .metric-card h3 {
+        color: #2c3e50 !important;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    .metric-card h2 {
+        color: #2c3e50 !important;
+        font-size: 1.8rem;
+        margin: 0;
+        font-weight: bold;
     }
     .significance-positive {
         color: #2ecc71;
@@ -82,12 +94,13 @@ st.markdown("""
         font-weight: 600;
     }
     .interpretation-card {
-        background: #000000;
+        background: linear-gradient(135deg, #e8f5e8 0%, #d0f0d0 100%);
         padding: 1.5rem;
         border-radius: 12px;
         border-left: 5px solid #27ae60;
         margin: 1rem 0;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        color: #2c3e50;
     }
     .conclusion-positive {
         background: linear-gradient(135deg, #e8f5e8 0%, #d0f0d0 100%);
@@ -267,8 +280,8 @@ with st.sidebar:
 # Layout principal com cabeçalho destacado
 st.markdown(f"""
 <div style="background-color: #3498db; padding: 20px; border-radius: 10px; margin-bottom: 30px;">
-    <h1 style="text-align: center; margin: 0;">Desempenho nos Simulados Externos</h1>
-    <h2 style="text-align: center; margin: 0;">Análise Estatística Avançada</h2>
+    <h1 style="text-align: center; margin: 0; color: white;">Desempenho nos Simulados Externos</h1>
+    <h2 style="text-align: center; margin: 0; color: white;">Análise Estatística Avançada</h2>
 </div>
 """, unsafe_allow_html=True)
 
@@ -459,42 +472,7 @@ if resultado_tukey:
         use_container_width=True
     )
 
-## Seções restantes (mapa de calor, top alunos, etc.) mantidas do código anterior
-# ... [o restante do seu código original aqui] ...
-
-## Seção 10: Recomendações Finais
-st.markdown("### 💡 Recomendações Pedagógicas")
-
-col1, col2 = st.columns(2)
-
-with col1:
-    st.markdown("""
-    <div class="interpretation-card">
-        <h4>🎯 Para Alunos com Baixo Desempenho</h4>
-        <ul>
-            <li>Reforço individualizado</li>
-            <li>Exercícios específicos</li>
-            <li>Acompanhamento personalizado</li>
-            <li>Plantão de dúvidas</li>
-        </ul>
-    </div>
-    """, unsafe_allow_html=True)
-
-with col2:
-    st.markdown("""
-    <div class="interpretation-card">
-        <h4>🚀 Para Manter a Evolução</h4>
-        <ul>
-            <li>Manter estratégias atuais</li>
-            <li>Simulados regulares</li>
-            <li>Feedback constante</li>
-            <li>Metas progressivas</li>
-        </ul>
-    </div>
-    """, unsafe_allow_html=True)
-
-# Adicione as seções restantes do seu código original aqui...
-# Seção 4: Mapa de Calor Interativo
+## Seção 5: Mapa de Calor Interativo
 st.markdown("### 👥 Desempenho Individual por Simulado")
 
 # Gráfico de heatmap aprimorado
@@ -529,7 +507,7 @@ fig2.update_layout(
 
 st.plotly_chart(fig2, use_container_width=True)
 
-## Seção 5: Top Alunos com Gráfico de Medalhas
+## Seção 6: Top Alunos com Gráfico de Medalhas
 st.markdown("### 🏆 Top 5 Alunos")
 
 # Calcular média por aluno
@@ -565,7 +543,7 @@ fig3.update_layout(
 
 st.plotly_chart(fig3, use_container_width=True)
 
-## Seção 6: Análise de Evolução Individual
+## Seção 7: Análise de Evolução Individual
 st.markdown("### 📈 Evolução Individual dos Alunos")
 
 # Selecionar aluno para análise detalhada
@@ -630,13 +608,207 @@ pior_simulado_aluno = simulados[np.argmin(desempenho_aluno)]
 evolucao_aluno = desempenho_aluno[-1] - desempenho_aluno[0]
 
 with col1:
-    st.metric("Média do Aluno", f"{media_aluno:.1f}%")
+    st.markdown(f"""
+    <div class="metric-card">
+        <h3>Média do Aluno</h3>
+        <h2>{media_aluno:.1f}%</h2>
+    </div>
+    """, unsafe_allow_html=True)
 
 with col2:
-    st.metric("Melhor Simulado", melhor_simulado_aluno)
+    st.markdown(f"""
+    <div class="metric-card">
+        <h3>Melhor Simulado</h3>
+        <h2>{melhor_simulado_aluno}</h2>
+    </div>
+    """, unsafe_allow_html=True)
 
 with col3:
-    st.metric("Maior Desafio", pior_simulado_aluno)
+    st.markdown(f"""
+    <div class="metric-card">
+        <h3>Maior Desafio</h3>
+        <h2>{pior_simulado_aluno}</h2>
+    </div>
+    """, unsafe_allow_html=True)
 
 with col4:
-    st.metric("Evolução", f"{evolucao_aluno:+.1f}%")
+    evolucao_aluno_color = "significance-positive" if evolucao_aluno > 0 else "significance-negative"
+    evolucao_aluno_text = f"+{evolucao_aluno:.1f}%" if evolucao_aluno > 0 else f"{evolucao_aluno:.1f}%"
+    
+    st.markdown(f"""
+    <div class="metric-card">
+        <h3>Evolução</h3>
+        <h2 class="{evolucao_aluno_color}">{evolucao_aluno_text}</h2>
+    </div>
+    """, unsafe_allow_html=True)
+
+## Seção 8: Alunos acima de 60% em Abas Estilizadas
+st.markdown("### ✅ Alunos com Desempenho Acima de 60%")
+
+# Criar abas para cada simulado
+tabs = st.tabs(simulados)
+
+for sim, tab in zip(simulados, tabs):
+    with tab:
+        col_sim, col_graph = st.columns([1, 2])
+
+        # Filtro para alunos acima de 60%
+        df_filtrado = df[df[sim] >= 60].sort_values(sim, ascending=False)
+
+        # Tabela estilizada
+        with col_sim:
+            st.dataframe(
+                df_filtrado[['Aluno', sim]].style
+                .background_gradient(cmap='Blues', subset=[sim])
+                .format({sim: "{:.1f}%"}),
+                height=400,
+                use_container_width=True
+            )
+
+        # Gráfico de barras
+        with col_graph:
+            if not df_filtrado.empty:
+                fig = px.bar(
+                    df_filtrado,
+                    y='Aluno',
+                    x=sim,
+                    orientation='h',
+                    title=f'Desempenho no {sim}',
+                    color=sim,
+                    color_continuous_scale='Blues',
+                    labels={sim: 'Porcentagem de Acertos (%)'},
+                    height=400
+                )
+
+                fig.update_layout(
+                    template='plotly_white',
+                    yaxis={'categoryorder': 'total ascending'},
+                    showlegend=False,
+                    coloraxis_showscale=False
+                )
+
+                fig.update_traces(
+                    hovertemplate='<b>%{y}</b><br>%{x:.1f}%<extra></extra>',
+                    texttemplate='%{x:.1f}%',
+                    textposition='inside'
+                )
+
+                st.plotly_chart(fig, use_container_width=True)
+            else:
+                st.warning(f"Nenhum aluno atingiu 60% no {sim}", icon="⚠️")
+
+## Seção 9: Estatísticas Descritivas
+st.markdown("### 📋 Estatísticas Descritivas")
+
+# Calcular estatísticas para cada simulado
+estatisticas = pd.DataFrame()
+for sim in simulados:
+    estatisticas[sim] = [
+        df[sim].min().round(2),
+        df[sim].max().round(2),
+        df[sim].mean().round(2),
+        df[sim].median().round(2),
+        df[sim].std().round(2)
+    ]
+
+estatisticas.index = ['Mínimo', 'Máximo', 'Média', 'Mediana', 'Desvio Padrão']
+
+# Exibir tabela
+st.dataframe(estatisticas.style.format("{:.2f}%"), use_container_width=True)
+
+## Seção 10: Boxplot de Distribuição
+st.markdown("### 📦 Distribuição de Notas por Simulado")
+
+# Criar boxplot
+fig_boxplot = px.box(
+    df.melt(value_vars=simulados, var_name='Simulado', value_name='Porcentagem'),
+    x='Simulado',
+    y='Porcentagem',
+    color='Simulado',
+    title='Distribuição de Notas por Simulado',
+    template='plotly_white',
+    height=500
+)
+
+fig_boxplot.update_layout(
+    xaxis_title="Simulado",
+    yaxis_title="Porcentagem de Acertos (%)",
+    showlegend=False
+)
+
+# Adicionar pontos individuais
+fig_boxplot.add_trace(go.Scatter(
+    x=df.melt(value_vars=simulados, var_name='Simulado', value_name='Porcentagem')['Simulado'],
+    y=df.melt(value_vars=simulados, var_name='Simulado', value_name='Porcentagem')['Porcentagem'],
+    mode='markers',
+    marker=dict(color='rgba(0,0,0,0.3)', size=5),
+    name='Alunos',
+    hovertemplate='<b>%{x}</b><br>Nota: %{y:.1f}%<extra></extra>'
+))
+
+st.plotly_chart(fig_boxplot, use_container_width=True)
+
+## Seção 11: Análise de Correlação
+st.markdown("### 🔗 Análise de Correlação entre Simulados")
+
+# Calcular matriz de correlação
+correlacao = df[simulados].corr()
+
+# Criar heatmap de correlação
+fig_corr = px.imshow(
+    correlacao,
+    text_auto=True,
+    aspect="auto",
+    color_continuous_scale='RdBu_r',
+    title='Matriz de Correlação entre Simulados',
+    template='plotly_white',
+    height=400
+)
+
+fig_corr.update_layout(
+    xaxis_title="Simulado",
+    yaxis_title="Simulado"
+)
+
+st.plotly_chart(fig_corr, use_container_width=True)
+
+# Interpretação da correlação
+st.info("""
+**Interpretação das correlações:**
+- **+1.0 a +0.7**: Correlação positiva forte
+- **+0.7 a +0.3**: Correlação positiva moderada  
+- **+0.3 a -0.3**: Correlação fraca ou inexistente
+- **-0.3 a -0.7**: Correlação negativa moderada
+- **-0.7 a -1.0**: Correlação negativa forte
+""")
+
+## Seção 12: Recomendações Finais
+st.markdown("### 💡 Recomendações Pedagógicas")
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.markdown("""
+    <div class="interpretation-card">
+        <h4>🎯 Para Alunos com Baixo Desempenho</h4>
+        <ul>
+            <li>Reforço individualizado</li>
+            <li>Exercícios específicos</li>
+            <li>Acompanhamento personalizado</li>
+            <li>Plantão de dúvidas</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col2:
+    st.markdown("""
+    <div class="interpretation-card">
+        <h4>🚀 Para Manter a Evolução</h4>
+        <ul>
+            <li>Manter estratégias atuais</li>
+            <li>Simulados regulares</li>
+            <li>Feedback constante</li>
+            <li>Metas progressivas</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
