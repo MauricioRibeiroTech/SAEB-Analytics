@@ -339,7 +339,7 @@ with col2:
     
     if resultado_anova:
         st.markdown(f"""
-        <div style='background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); 
+        <div style='background: #000000; 
                     padding: 1.5rem; border-radius: 10px; border-left: 5px solid #3498db;'>
             <h4 style='margin-top: 0;'>Resultados da ANOVA</h4>
             <p><b>F-estatística:</b> {resultado_anova['f_stat']:.4f}</p>
