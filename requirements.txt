@@ -5,3 +5,5 @@ numpy
 streamlit
 matplotlib
 seaborn
+scipy
+statsmodels 
