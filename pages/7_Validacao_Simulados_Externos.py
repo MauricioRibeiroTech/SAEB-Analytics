@@ -465,7 +465,7 @@ if resultado_tukey:
     def highlight_significant(row):
         if row['reject']:
             return ['background-color: #000000' for _ in row]
-        return ['background-color: white' for _ in row]
+        return ['background-color: #000000' for _ in row]
     
     st.dataframe(
         tukey_df.style.apply(highlight_significant, axis=1),
