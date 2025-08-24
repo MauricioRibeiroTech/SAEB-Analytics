@@ -55,7 +55,7 @@ st.markdown("""
         color: white;
     }
     .metric-card {
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        background: #000000;
         padding: 1.2rem;
         border-radius: 12px;
         border-left: 5px solid #3498db;
@@ -82,7 +82,7 @@ st.markdown("""
         font-weight: 600;
     }
     .interpretation-card {
-        background: linear-gradient(135deg, #e8f5e8 0%, #d0f0d0 100%);
+        background: #000000;
         padding: 1.5rem;
         border-radius: 12px;
         border-left: 5px solid #27ae60;
