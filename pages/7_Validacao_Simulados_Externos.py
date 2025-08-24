@@ -464,7 +464,7 @@ if resultado_tukey:
     # Destacar resultados significativos
     def highlight_significant(row):
         if row['reject']:
-            return ['background-color: #e8f5e8' for _ in row]
+            return ['background-color: #000000' for _ in row]
         return ['background-color: white' for _ in row]
     
     st.dataframe(
