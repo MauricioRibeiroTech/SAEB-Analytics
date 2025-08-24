@@ -55,7 +55,7 @@ st.markdown("""
         color: white;
     }
     .metric-card {
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        background: #000000;
         padding: 1.2rem;
         border-radius: 12px;
         border-left: 5px solid #3498db;
