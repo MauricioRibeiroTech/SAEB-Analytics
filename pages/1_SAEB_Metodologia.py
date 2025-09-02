@@ -137,10 +137,10 @@ st.markdown(f"""
     <h2 style="text-align: center; margin: 0;">Análise de Desempenho nos Simulados</h2>
 </div>
 """, unsafe_allow_html=True)
-st.markdown("<span style='color: red; font-weight: bold;'>Em caso de nota zero e você tem frequência no dia do simulado. Por favor, entrar em contato com o professor da disciplina da sua série.</span>", unsafe_allow_html=True)
 
 ## Seção 1: Visão Geral em Cards
 st.markdown("### 📊 Visão Geral do Desempenho")
+st.markdown("<span style='color: red; font-weight: bold;'>Em caso de nota zero e você tem frequência no dia do simulado. Por favor, entrar em contato com o professor da disciplina da sua série.</span>", unsafe_allow_html=True)
 
 # Criar métricas em colunas
 col1, col2, col3 = st.columns(3)
@@ -384,5 +384,6 @@ if 'Componente' in df.columns and len(df['Componente'].unique()) > 1:
 
 
     st.plotly_chart(fig_comp, use_container_width=True)
+
 
 
