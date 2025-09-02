@@ -125,8 +125,7 @@ col1, col2 = st.columns([3, 2], gap="large")
 
 with col1:
     st.markdown("### 📈 Desempenho dos Alunos")
-st.markdown("<span style='color: red; font-weight: bold;'>Em caso de nota zero e você tem frequência no dia do simulado. Por favor, entrar em contato com o professor da disciplina da sua série.</span>", unsafe_allow_html=True)
-
+    st.markdown("<span style='color: red; font-weight: bold;'>Em caso de nota zero e você tem frequência no dia do simulado. Por favor, entrar em contato com o professor da disciplina da sua série.</span>", unsafe_allow_html=True)
     # Gráfico de barras agrupadas
     fig = px.bar(
         df_filtrado.melt(id_vars='Aluno', var_name='Simulado', value_name='Nota'),
@@ -256,3 +255,4 @@ if aluno_selecionado:
                 delta_color="inverse" if nota and nota < 6 else "normal"
 
             )
+
