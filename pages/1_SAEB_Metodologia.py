@@ -61,14 +61,14 @@ def calcular_porcentagens(df, disciplina):
             'Sim4': 15, 'Sim5': 18, 'Sim6': 18,
             'Sim7': 20, 'Sim8': 16, 'Sim9': 26,
             'Sim10': 16, 'Sim11': 18, 'Sim12': 16,
-            'Sim13': 16,'Sim14': 23,'Sim15': 16,'Sim16': 24
+            'Sim13': 16,'Sim14': 23,'Sim15': 16,'Sim16': 24,'Sim17': 25
         },
         "Português": {
             'Sim1': 10, 'Sim2': 10, 'Sim3': 10,
             'Sim4': 15, 'Sim5': 18, 'Sim6': 18,
             'Sim7': 14, 'Sim8': 16, 'Sim9': 26,
             'Sim10': 16, 'Sim11': 18, 'Sim12': 16,
-            'Sim13': 16,'Sim14': 16,'Sim15': 16,'Sim16': 15
+            'Sim13': 16,'Sim14': 16,'Sim15': 16,'Sim16': 15,,'Sim17': 15
         }
     }
 
@@ -380,5 +380,6 @@ if 'Componente' in df.columns and len(df['Componente'].unique()) > 1:
         xaxis_title="Componente Curricular",
         showlegend=False
     )
+
 
     st.plotly_chart(fig_comp, use_container_width=True)
