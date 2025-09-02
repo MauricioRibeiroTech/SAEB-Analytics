@@ -116,7 +116,7 @@ with st.sidebar:
         if componente_selecionada == "Matemática":
             st.markdown("👨‍🏫 **Mauricio A. Ribeiro**")
         else:
-            st.markdown("👩‍🏫 **Mikela**")
+            st.markdown("👩‍🏫 **______**")
 
     st.markdown("---")
     st.markdown("""
@@ -383,3 +383,4 @@ if 'Componente' in df.columns and len(df['Componente'].unique()) > 1:
 
 
     st.plotly_chart(fig_comp, use_container_width=True)
+
