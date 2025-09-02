@@ -134,6 +134,9 @@ try:
     5. **Utilize** os insights para planejamento pedagógico
     """)
 
+
+    st.markdown("<span style='color: red; font-weight: bold;'>Em caso de nota zero e você tem frequência no dia do simulado. Por favor, entrar em contato com o professor da disciplina da sua série.</span>", unsafe_allow_html=True)
+
     # Rodapé
     st.markdown("---")
     st.markdown("""
@@ -146,4 +149,5 @@ try:
 except Exception as e:
     st.error(f"Ocorreu um erro inesperado: {str(e)}")
     st.info("Por favor, recarregue a página ou tente novamente mais tarde.")
+
 
