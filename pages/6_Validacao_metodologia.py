@@ -202,7 +202,7 @@ with st.sidebar:
         if componente_selecionada == "Matemática":
             st.markdown("👨‍🏫 **Mauricio A. Ribeiro**")
         else:
-            st.markdown("👩‍🏫 **Mikela**")
+            st.markdown("👩‍🏫 **____**")
 
     st.markdown("---")
     st.markdown("""
