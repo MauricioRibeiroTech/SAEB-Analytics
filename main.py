@@ -82,14 +82,14 @@ with st.sidebar:
 try:
     st.markdown("""
     <div class="header">
-        <h1 style="color: white; text-align: center; margin: 0;">SAEB Analytics</h1>
+        <h1 style="color: white; text-align: center; margin: 0;">HD Analytics</h1>
         <h2 style="color: white; text-align: center; margin: 0;">Plataforma de Análise Educacional</h2>
     </div>
     """, unsafe_allow_html=True)
 
     # Introdução
     st.markdown("""
-    Bem-vindo à plataforma **SAEB Analytics**, uma solução completa para análise e acompanhamento 
+    Bem-vindo à plataforma **HD Analytics**, uma solução completa para análise e acompanhamento 
     do desempenho educacional nos simulados SAEB. Esta ferramenta foi desenvolvida para fornecer 
     insights valiosos sobre o progresso dos alunos e auxiliar na tomada de decisões pedagógicas.
     """)
@@ -142,13 +142,14 @@ try:
     st.markdown("""
     <div style="text-align: center; color: #7f8c8d; font-size: 14px;">
         <p>Plataforma desenvolvida por Mauricio A. Ribeiro</p>
-        <p>© 2025 SAEB Analytics - Todos os direitos reservados</p>
+        <p>© 2025 HD Analytics - Todos os direitos reservados</p>
     </div>
     """, unsafe_allow_html=True)
 
 except Exception as e:
     st.error(f"Ocorreu um erro inesperado: {str(e)}")
     st.info("Por favor, recarregue a página ou tente novamente mais tarde.")
+
 
 
 
