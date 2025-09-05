@@ -179,41 +179,41 @@ YAN,7B,Português,6,3,2,5,3,1
 YASMIN,7B,Português,9,5,6,4,5,7
 SOPHIA,7B,Português,7,4,1,5,7,8
 JULIA,7B,Português,0,4,5,4,8,9
-ALÍCIA BRITO,8A,Matemática,8,9,9,9,8,4
+ALÍCIA BRITO,8A,Matemática,8,9,9,9,8,8
 ANIBAL,8A,Matemática,6,3,10,7,6,3
-DANIEL MARQUES,8A,Matemática,5,3,7,6,4,2
-DAVI,8A,Matemática,6,7,9,7,6,3
-EMANUELA,8A,Matemática,4,6,8,7,6,3
-GUSTAVO,8A,Matemática,5,7,10,9,7,4
+DANIEL MARQUES,8A,Matemática,5,3,7,6,4,4
+DAVI,8A,Matemática,6,7,9,7,6,6
+EMANUELA,8A,Matemática,4,6,8,7,6,6
+GUSTAVO,8A,Matemática,5,7,10,9,7,8
 HELENA,8A,Matemática,8,7,10,9,9,5
 HELOISA,8A,Matemática,2,3,8,8,8,4
-HOSANA,8A,Matemática,2,2,7,3,7,4
-ISABELLY,8A,Matemática,3,4,1,4,7,4
+HOSANA,8A,Matemática,2,2,7,3,7,5
+ISABELLY,8A,Matemática,3,4,1,4,7,5
 KAIO,8A,Matemática,3,1,5,4,3,2
 KAIQUE,8A,Matemática,2,3,6,3,3,2
 LAURA,8A,Matemática,8,7,10,9,4,2
 LEONARDO,8A,Matemática,4,5,4,4,5,3
-LETÍCIA PETRACCA,8A,Matemática,6,5,9,0,9,5
-LUCAS,8A,Matemática,4,2,3,4,4,2
-MARIA CLARA,8A,Matemática,5,4,6,6,5,3
-MARIANA,8A,Matemática,0,4,6,3,6,3
+LETÍCIA PETRACCA,8A,Matemática,6,5,9,0,9,8
+LUCAS,8A,Matemática,4,2,3,4,4,3
+MARIA CLARA,8A,Matemática,5,4,6,6,5,7
+MARIANA,8A,Matemática,0,4,6,3,6,4
 MIRIAN,8A,Matemática,4,3,6,5,5,3
-MORGANA,8A,Matemática,5,3,7,7,7,4
-NICOLLE,8A,Matemática,7,7,0,8,7,4
-PIETRO,8A,Matemática,7,6,9,8,8,4
-RAFAELA,8A,Matemática,6,8,10,8,10,5
-REBECA,8A,Matemática,6,7,10,8,10,5
-SOFIA,8A,Matemática,3,6,6,8,4,2
-VALENTINA,8A,Matemática,7,6,10,9,8,4
-VICTOR GUSTAVVO,8A,Matemática,5,5,9,7,3,2
-VICTOR MANUEL,8A,Matemática,3,4,9,6,4,2
-VINICIUS EDUARDO,8A,Matemática,4,0,8,3,6,3
+MORGANA,8A,Matemática,5,3,7,7,7,8
+NICOLLE,8A,Matemática,7,7,0,8,7,8
+PIETRO,8A,Matemática,7,6,9,8,8,8
+RAFAELA,8A,Matemática,6,8,10,8,10,10
+REBECA,8A,Matemática,6,7,10,8,10,8
+SOFIA,8A,Matemática,3,6,6,8,4,4
+VALENTINA,8A,Matemática,7,6,10,9,8,8
+VICTOR GUSTAVVO,8A,Matemática,5,5,9,7,3,4
+VICTOR MANUEL,8A,Matemática,3,4,9,6,4,5
+VINICIUS EDUARDO,8A,Matemática,4,0,8,3,6,6
 YASMIM,8A,Matemática,5,3,9,6,7,4
 MARIA EDUARDA,8A,Matemática,5,5,0,5,1,1
 ARTHUR,8A,Matemática,0,0,10,8,7,4
-FELIPE,8A,Matemática,5,6,6,7,4,2
-SOPHE,8A,Matemática,0,0,0,6,6,3
-MIGUEL,8A,Matemática,0,0,0,0,5,3
+FELIPE,8A,Matemática,5,6,6,7,4,3
+SOPHE,8A,Matemática,0,0,0,6,6,6
+MIGUEL,8A,Matemática,0,0,0,0,5,5
 DANILO,8A,Matemática,0,0,0,0,0,0
 ANA JULIA,8A,Matemática,0,0,0,0,5,3
 ALÍCIA BRITO,8A,Português,8,0,6,8,8,7
@@ -253,3 +253,4 @@ MARIA EDUARDA,8A,Português,2,4,0,9,3,5
 FELIPE,8A,Português,0,0,3,4,5,3
 ARTHUR,8A,Português,0,0,7,6,5,7
 SOPHE,8A,Português,0,0,0,9,9,9
+
