@@ -4,7 +4,7 @@ import os
 # Configurações da página
 try:
     st.set_page_config(
-        page_title="SAEB Analytics",
+        page_title="HD Analytics",
         page_icon=":book:",
         layout="wide",
         initial_sidebar_state="expanded"
@@ -149,5 +149,6 @@ try:
 except Exception as e:
     st.error(f"Ocorreu um erro inesperado: {str(e)}")
     st.info("Por favor, recarregue a página ou tente novamente mais tarde.")
+
 
 
