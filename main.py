@@ -52,7 +52,7 @@ with st.sidebar:
     try:
         st.markdown("""
         <div style="text-align: center; margin-bottom: 30px;">
-            <h1 style="color: #2c3e50; font-size: 24px;">SAEB Analytics</h1>
+            <h1 style="color: #2c3e50; font-size: 24px;">HD Analytics</h1>
             <h2 style="color: #3498db; font-size: 18px;">Escola Estadual Helena Dionysio</h2>
         </div>
         """, unsafe_allow_html=True)
@@ -149,6 +149,7 @@ try:
 except Exception as e:
     st.error(f"Ocorreu um erro inesperado: {str(e)}")
     st.info("Por favor, recarregue a página ou tente novamente mais tarde.")
+
 
 
 
