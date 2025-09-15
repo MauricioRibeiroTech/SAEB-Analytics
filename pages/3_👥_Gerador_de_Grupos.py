@@ -184,16 +184,8 @@ def carregar_dados(arquivo_selecionado):
 def get_descricao_habilidade(codigo, arquivo_nome):
     """Obtém a descrição da habilidade baseada no nome do arquivo"""
     codigo = codigo.strip().replace(' ', '')
-    
-    if "CAED1_3_matematica" in arquivo_nome:
-        return DESCRICOES_HABILIDADES["CAED1_Matemática"].get(codigo, "N/A")
-    elif "CAED2_3_matematica" in arquivo_nome:
-        return DESCRICOES_HABILIDADES["CAED2_Matemática"].get(codigo, "N/A")
-    elif "CAED1_3_portugues" in arquivo_nome:
-        return DESCRICOES_HABILIDADES["CAED1_Português"].get(codigo, "N/A")
-    elif "CAED2_3_portugues" in arquivo_nome:
-        return DESCRICOES_HABILIDADES["CAED2_Português"].get(codigo, "N/A")
-    elif "9_matematica" in arquivo_nome:
+      
+    if "9_matematica" in arquivo_nome:
         return DESCRICOES_HABILIDADES["9_Matematica"].get(codigo, "N/A")
     elif "9_portugues" in arquivo_nome:
         return DESCRICOES_HABILIDADES["9_Português"].get(codigo, "N/A")
