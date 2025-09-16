@@ -457,12 +457,10 @@ st.dataframe(
     height=300
 )
 
-# Footer informativo
 st.markdown("---")
-st.markdown(f"""
-<div style="text-align: center; color: #94a3b8; padding: 25px;">
-    <p>📊 Dashboard gerado em {datetime.now().strftime("%d/%m/%Y às %H:%M")}</p>
-    <p>🎯 Sistema de pontuação: S1(15) • S2(10) • S3(15) • S4(15) • S5(15) • S6(25) pontos</p>
-    <p>📈 Percentual calculado com base na pontuação máxima de cada simulado</p>
+st.markdown("""
+<div style="text-align: center; color: #6B7280; font-size: 14px;">
+    <p>Escola Estadual Helena Dionysio - Recomposição da Aprendizagem - Plano de Ação</p>
+    <p>© 2025 HD Analytic - Todos os direitos reservados</p>
 </div>
 """, unsafe_allow_html=True)
