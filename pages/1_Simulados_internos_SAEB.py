@@ -391,6 +391,14 @@ if 'Componente' in df.columns and len(df['Componente'].unique()) > 1:
 
     st.plotly_chart(fig_comp, use_container_width=True)
 
+st.markdown("---")
+st.markdown("""
+<div style="text-align: center; color: #6B7280; font-size: 14px;">
+    <p>Escola Estadual Helena Dionysio - Recomposição da Aprendizagem - Plano de Ação</p>
+    <p>© 2025 HD Analytic - Todos os direitos reservados</p>
+</div>
+""", unsafe_allow_html=True)
+
 
 
 
