@@ -169,11 +169,11 @@ st.markdown("""
 @st.cache_data
 def load_data():
     df = pd.read_csv("pages/Simulados_ - LAM.csv")
-    df.columns = ['Aluno', 'Série', 'Turma', 'S1', 'S2', 'S3', 'S4', 'S5', 'S6']
+    df.columns = ['Aluno', 'Série', 'Turma', 'S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7']
     return df
 
 # Definir pontuação máxima de cada simulado
-MAX_SCORES = {'S1': 15, 'S2': 10, 'S3': 15, 'S4': 15, 'S5': 15, 'S6': 25}
+MAX_SCORES = {'S1': 15, 'S2': 10, 'S3': 15, 'S4': 15, 'S5': 15, 'S6': 25, 'S7': 25}
 SIMULADOS = list(MAX_SCORES.keys())
 SIMULADOS_PERCENT = [f'{s}_%' for s in SIMULADOS]
 
