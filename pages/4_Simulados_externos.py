@@ -71,10 +71,10 @@ with st.sidebar:
     </div>
     """, unsafe_allow_html=True)
 
-    st.page_link("main.py", label="🏠 Página Inicial")
-    st.page_link("pages/3_Relatorios_Mensais.py", label="📅 Relatório Mensal")
-    st.page_link("pages/2_SAEB_Descritores.py", label="📊 Relatório SAEB Descritores")
-    st.page_link("pages/1_SAEB_Metodologia.py", label="📈 Desempenho percentual")
+    #st.page_link("main.py", label="🏠 Página Inicial")
+    #st.page_link("pages/3_Relatorios_Mensais.py", label="📅 Relatório Mensal")
+    #st.page_link("pages/2_SAEB_Descritores.py", label="📊 Relatório SAEB Descritores")
+    #st.page_link("pages/1_SAEB_Metodologia.py", label="📈 Desempenho percentual")
 
     # Carregar dados
     df = pd.read_csv("pages/Simulados_ - CAED-.csv", sep=",")
