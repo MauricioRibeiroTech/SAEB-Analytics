@@ -138,18 +138,18 @@ try:
     st.markdown("<span style='color: red; font-weight: bold;'>Em caso de nota zero e você tem frequência no dia do simulado. Por favor, entrar em contato com o professor da disciplina da sua série.</span>", unsafe_allow_html=True)
 
     # Rodapé
-# Rodapé
-st.markdown("---")
-st.markdown("""
-<div style="text-align: center; color: #6B7280; font-size: 14px;">
-    <p>Escola Estadual Helena Dionysio - Recomposição da Aprendizagem - Plano de Ação</p>
-    <p>© 2025 HD Analytic - Todos os direitos reservados</p>
-</div>
-""", unsafe_allow_html=True)
+    st.markdown("---")
+    st.markdown("""
+    <div style="text-align: center; color: #6B7280; font-size: 14px;">
+        <p>Escola Estadual Helena Dionysio - Recomposição da Aprendizagem - Plano de Ação</p>
+        <p>© 2025 HD Analytic - Todos os direitos reservados</p>
+    </div>
+    """, unsafe_allow_html=True)
 
 except Exception as e:
     st.error(f"Ocorreu um erro inesperado: {str(e)}")
     st.info("Por favor, recarregue a página ou tente novamente mais tarde.")
+
 
 
 
