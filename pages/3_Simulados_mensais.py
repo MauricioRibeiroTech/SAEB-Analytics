@@ -256,3 +256,10 @@ if aluno_selecionado:
 
             )
 
+st.markdown("---")
+st.markdown("""
+<div style="text-align: center; color: #6B7280; font-size: 14px;">
+    <p>Escola Estadual Helena Dionysio - Recomposição da Aprendizagem - Plano de Ação</p>
+    <p>© 2025 HD Analytic - Todos os direitos reservados</p>
+</div>
+""", unsafe_allow_html=True)
