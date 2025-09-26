@@ -76,8 +76,8 @@ st.markdown("""
 def load_and_clean_data():
     """Carrega e limpa os dados dos dois arquivos CSV."""
     try:
-        df_1ed = pd.read_csv('PPR_9A.csv', sep=';', decimal=',', encoding='utf-8-sig')
-        df_2ed = pd.read_csv('PPR_9A_2ED.csv', sep=';', decimal=',', encoding='utf-8-sig')
+        df_1ed = pd.read_csv('pages/PPR_9A.csv', sep=';', decimal=',', encoding='utf-8-sig')
+        df_2ed = pd.read_csv('pages/PPR_9A_2ED.csv', sep=';', decimal=',', encoding='utf-8-sig')
 
         for df in [df_1ed, df_2ed]:
             df.columns = df.columns.str.strip()
