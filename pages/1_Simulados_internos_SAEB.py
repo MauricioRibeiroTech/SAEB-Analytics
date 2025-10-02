@@ -63,7 +63,7 @@ def calcular_porcentagens(df, disciplina):
             'Sim10': 16,'Sim11':18,'Sim12': 16,
             'Sim13': 16,'Sim14': 23,'Sim15': 16,
             'Sim16': 24,'Sim17': 25, 'Sim18':15,
-            'Sim19':26
+            'Sim19':26,'Sim20':22,'Sim21':19
 
         },
         "Português": {
@@ -73,7 +73,7 @@ def calcular_porcentagens(df, disciplina):
             'Sim10': 16, 'Sim11': 18, 'Sim12': 16,
             'Sim13': 16,'Sim14': 16,'Sim15': 16,
             'Sim16': 15,'Sim17': 15, 'Sim18':15, 
-            'Sim19':29
+            'Sim19':29,'Sim20': 22,'Sim21':22
 
         }
     }
@@ -398,6 +398,7 @@ st.markdown("""
     <p>© 2025 HD Analytic - Todos os direitos reservados</p>
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
